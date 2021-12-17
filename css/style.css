@@ -1,0 +1,286 @@
+@font-face {
+  font-family: 'Graphik LCG';
+  src: url('../fonts/GraphikLCG-Medium.woff2') format('woff2'),
+    url('../fonts/GraphikLCG-Medium.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+    url('../fonts/Gilroy-Regular.woff') format('woff');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Gilroy-ExtraBold.woff') format('woff');
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+    url('../fonts/Gilroy-Medium.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {/*Минимальный сброс стилей*/
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Gilroy', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.float {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+  float: none;
+}
+
+/*---index.html---*/
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222020;
+}
+
+.header-brand {
+  color: #fff;
+}
+
+.list-ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;/*list-ul убираем маркер*/
+}
+
+.header-item {
+  margin-bottom: 30px;
+  font-family: 'Graphik LCG', sans-serif;
+  color: #fff;
+  text-decoration: none;/*Убираем подчёркивание*/
+}
+
+.item-download {
+  padding: 20px;
+  border: 3px solid #2f1ce4; /*Цвет Skillbox*/
+  color: #fff;
+  background-color: #2f1ce4; /*Цвет Skillbox*/
+}
+
+.item-detailed {
+  padding: 20px;
+  border: 3px solid #fff;
+  color: #fff;
+}
+/*---Конец index.html---*//*Стилизация страниц растёт поэтому ставлю пометку Конец (название).html, чтобы помнить за кем*/
+
+
+/*---program.html---*/
+.container {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 1170px;
+}
+
+.arrow-pages {
+  width: 100%;
+}
+
+.arow-next-svg {/*НАЗАД*/
+  padding-left: 25px;
+  background-image: url(../img/arow-next.svg);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.header-info {
+  margin-top: 100px;
+  padding-left: 100px;
+  font-size: 48px;
+  color: #222020;
+}
+
+.h2-blue {
+  margin: 100px 0 25px;
+  padding-left: 180px;
+  font-size: 36px;
+  color: #2f1ce4; /*Цвет Skillbox*/
+}
+
+.list-indent {
+  padding-left: 200px;
+  font-size: 18px;
+}
+
+.link-text {
+  margin: 0;
+}
+
+.paragraph-indent {
+  margin-bottom: 20px;
+  padding-left: 180px;
+}
+
+.figure-indent {
+  display: inline-block;
+  margin: 50px 0;
+  padding-left: 200px;
+  text-align: center;
+}
+
+.table-indent {
+  margin-top: 100px;
+  border: 1px solid #000;
+}
+
+.table-collapse {
+  border-collapse: collapse;/*Не двойная линия*/
+}
+
+.table-indent th, .table-indent td {
+  padding: 5px;
+  border: solid 1px #000;
+}
+/*---Конец program.html---*/
+
+
+/*---modules.html---*/
+.wave-body {
+  padding-bottom: 500px;
+  width: 100%;
+  background-image: url("../img/wave.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.container-skillbox {
+  margin: 0 auto;
+  padding: 30px 0 0;
+  width: 1343px;
+}
+
+.header-skillbox {
+  margin-bottom: 42px;
+  padding-left: 85px;
+  font-family: 'Graphik LCG';/*В фотошопе Graphik*/
+  font-size: 40px;/*Поставила px он по макету ближе*/
+  line-height: 56px;
+  color: #222020;
+}
+
+.arrow-indent {
+  padding-left: 85px;
+}
+
+.header-module {
+  margin: 100px 0 90px;
+  padding-left: 185px;
+  font-size: 48px;
+  color: #222020;
+}
+
+.ul-card {
+  display: flex;/*Ставить в ряд*/
+  flex-wrap: wrap;/*Переход на новую строку*/
+  margin: 0;
+  padding-left: 165px;
+  list-style-type: none;/*Убираем маркер*/
+}
+
+.ul-card > li {/*Обращение к первому уровню li*/
+  position: relative;/*Для сына section*/
+  height: 485px;
+  box-shadow: 0 0 15px 5px #ebebeb;
+}
+
+.ul-card > li:nth-child(even) {/*Обратилась к чётным*/
+  margin: 0 53px;
+}
+
+.ul-card > li:not(:last-child) {/*Обратилась ко всем кроме последней li*/
+  margin-bottom: 60px;
+}
+
+.introduction-jpg {
+  width: 480px;
+}
+
+.h2-module {
+  margin: 17px 0;
+  padding-left: 50px;
+  font-size: 36px;
+  color: #2f1ce4; /*Цвет Skillbox*/
+}
+
+.ul-list {
+  margin: 0;
+  padding-left: 50px;
+  list-style-type: none;/*Убираем маркер*/
+}
+
+.ul-list > li {/*Обращение к второму уровню li*/
+  font-family: 'Gilroy';
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: normal;/*Regular*/
+}
+
+.ul-list > li:nth-child(even) {/*Обратилась к чётным*/
+  margin: 5px 0;
+}
+
+.number {
+  position: absolute;/*Для отца ul-card*/
+  right: 20px;
+  bottom: 20px;
+  font-size: 48px;
+  color: #eaeaea;
+}
+
+.div-button {/*Для центрирования*/
+  text-align: center;
+}
+
+.button-show {
+  border: 3px solid #2f1ce4;
+  background-color: #fff;
+  width: 280px;
+  height: 80px;
+  font-size: 18px;
+  line-height: 56px;
+  color: #2f1ce4;
+  cursor: pointer;
+}
+
+/*---Конец modules.html---*/
